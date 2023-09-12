@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+        <link rel="stylesheet" href="/sample.css">
+    <title>Sample Test</title>
+</head>
+<body>
+    <!-- toolbar -->
+    <div class="top-toolbar">
+             <img class="logo" src="/assets/logo.svg" alt="logo">
+             <div class="wallet-notification">
+                <div class="wallet">
+                    <img src="assets/wallet-icon.svg" alt="wallet_icon">
+                    <div>232.00 <span>CAD</span></div>
+                    <img src="assets/plus_icon.svg" alt="add_icon" class="cursor-pointer">
+                </div>
+                <div class="notification">
+                    <img src="assets/bell_icon.svg" alt="notification">
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="d-flex flex-row">
+        <!-- sidenav -->
+        <div class="sidenav d-flex flex-column">
+            <div class="d-flex flex-row sidenav-content align-items-center">
+                <img src="assets/home_icon.svg" alt="home_icon">
+                Home
+            </div>
+            <div class="d-flex flex-row sidenav-content selected align-items-center">
+                <img src="assets/send_icon.svg" alt="send_icon">
+                Send money
+            </div>
+            <div class="d-flex flex-row sidenav-content align-items-center">
+                <img src="assets/users.svg" alt="users">
+                Receivers
+            </div>
+            <div class="d-flex flex-row sidenav-content align-items-center">
+                <img src="assets/E-Transfer.svg" alt="E-Transfer">
+                Transactions
+            </div>
+            <div class="d-flex flex-row sidenav-content align-items-center">
+                <img src="assets/Bill Payment.svg" alt="Bill Payment">
+                Reports
+            </div>
+            <div class="d-flex flex-row sidenav-content align-items-center">
+                <img src="assets/profile.svg" alt="profile">
+                Profile
+            </div>
+            <div class="d-flex flex-row sidenav-content align-items-center">
+                <img src="assets/MegaphoneSimple.svg" alt="MegaphoneSimple">
+                Broadcast
+            </div>
+            <div class="d-flex flex-row sidenav-content align-items-center">
+                <img src="assets/menu.svg" alt="menu">
+                More
+            </div>
+        </div>
+        <!-- body -->
+        <div class="content-area d-flex flex-column">
+            <div class="d-flex flex-row align-items-center content-head-part">
+                <img src="assets/arrow-sm-left.svg" alt="back">
+                <div class="content-head">Choose Receiver</div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Search Receiver">
+                    <a class="search-btn" href="#">
+                        <!-- Seach Icon -->
+                        <img src="assets/search.svg" alt="search">
+                    </a>
+                </div>
+                
+                <button class="d-flex flex-row align-items-center">
+                    <img src="assets/plus.svg" alt="add">
+                    <div>Add receiver</div>
+                </button>
+            </div>
+            <!-- table -->
+            <div class="table-part">
+                <table id="radioTable">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Name</th>
+                            <th>Relationship</th>
+                            <th>Account no.</th>
+                            <th>Payout method</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Rows will be dynamically generated here -->
+                    </tbody>
+                </table>
+                <div class="w-100 d-flex justify-content-end">
+                    <div id="custom-pagination">
+                        <span id="page-info"></span>
+                        <button id="prev-page"><img src="assets/chevron-right.svg" class="back" alt="back"></button>
+                        <button id="next-page"><img src="assets/chevron-right.svg" alt="next"></button>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+    
+    <script src="/sample.js">
+    </script>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+</body>
+</html>
